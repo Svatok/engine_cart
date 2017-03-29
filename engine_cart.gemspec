@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = EngineCart::VERSION
   s.authors     = ["Svatok"]
   s.email       = ["s_s_s@ua.fm"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of EngineCart."
-  s.description = "TODO: Description of EngineCart."
+  s.homepage    = "https://github.com/Svatok/engine_cart/edit/dev/"
+  s.summary     = "Summary of EngineCart."
+  s.description = "Cart for e-store."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
