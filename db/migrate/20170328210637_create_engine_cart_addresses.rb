@@ -6,7 +6,7 @@ class CreateEngineCartAddresses < ActiveRecord::Migration[5.0]
       t.string :address
       t.string :city
       t.string :zip
-      t.references :engine_cart_country, foreign_key: true
+      t.references :country, index: true
       t.string :phone
       t.string :address_type
       t.references :addressable, polymorphic: true, index: true
