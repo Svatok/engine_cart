@@ -1,8 +1,8 @@
 require "engine_cart/engine"
 require 'jquery-rails'
-require 'turbolinks', '~> 5'
-require 'jbuilder', '~> 2.5'
-require 'draper', github: 'audionerd/draper', branch: 'rails5'
+require 'turbolinks'
+require 'jbuilder'
+require 'draper'
 require 'rectify'
 require 'kaminari'
 require 'haml'

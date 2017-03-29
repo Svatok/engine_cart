@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-rails'
   s.add_dependency 'turbolinks', '~> 5'
   s.add_dependency 'jbuilder', '~> 2.5'
-  s.add_dependency 'draper', github: 'audionerd/draper', branch: 'rails5'
+  # s.add_dependency 'draper', github: 'audionerd/draper', branch: 'rails5'
   s.add_dependency 'rectify'
   s.add_dependency 'kaminari'
   s.add_dependency 'aasm'
