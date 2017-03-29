@@ -9,7 +9,7 @@ class CreateEngineCartAddresses < ActiveRecord::Migration[5.0]
       t.references :country, index: true
       t.string :phone
       t.string :address_type
-      t.references :addressable, polymorphic: true, index: true
+      t.references :addressable, polymorphic: true
 
       t.timestamps
     end
