@@ -40,6 +40,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'letter_opener_web'
-  s.add_development_dependency 'capybara-webkit'
+  # s.add_development_dependency 'capybara-webkit'
   s.add_development_dependency 'rack_session_access'
 end
