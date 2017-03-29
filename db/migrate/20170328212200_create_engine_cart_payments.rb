@@ -5,7 +5,7 @@ class CreateEngineCartPayments < ActiveRecord::Migration[5.0]
       t.string :name_on_card
       t.string :mm_yy
       t.integer :cvv
-      t.references :order, foreign_key: true
+      t.references :order, index: true
 
       t.timestamps
     end
