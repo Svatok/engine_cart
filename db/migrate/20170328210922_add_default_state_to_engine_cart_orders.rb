@@ -1,4 +1,4 @@
-class AddDefaultStateToOrders < ActiveRecord::Migration[5.0]
+class AddDefaultStateToEngineCartOrders < ActiveRecord::Migration[5.0]
   def up
     change_column :orders, :state, :string, default: 'cart'
   end
