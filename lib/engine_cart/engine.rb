@@ -3,7 +3,7 @@ module EngineCart
     isolate_namespace EngineCart
     
     config.to_prepare do
-      MyEngine::ApplicationController.helper Rails.application.helpers
+      EngineCart::ApplicationController.helper Rails.application.helpers
     end
   end
 end
