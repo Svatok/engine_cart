@@ -2,9 +2,9 @@ module EngineCart
   class Engine < ::Rails::Engine
     isolate_namespace EngineCart
     
-    config.before_initialize do
+    initializer 'cart_engine.action_controller' do |app|
       ActiveSupport.on_load :action_controller do
-        helper EngineCart::Engine.helpers
+        helper EngineCart::ApplicationHelper
       end
     end
   end
