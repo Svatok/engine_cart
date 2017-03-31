@@ -12,7 +12,7 @@ module EngineCart
       @order.send(@params['edit'] + '_step!') if editing_data?
       @view_partial = @order.state
       place_order if @view_partial == 'complete'
-      return broadcast(:invalid) unless lookup_context.exists?(@view_partial, ["checkouts"], true)
+      return broadcast(:invalid) unless lookup_context.exists?(@view_partial, ["engine_cart/checkouts"], true)
       broadcast(:ok, @order.decorate, @view_partial, presenter)
     end
 
