@@ -25,7 +25,7 @@
     %span.help-block= object.errors.full_messages_for(:zip).first
   .form-group{:class => ("has-error" if object.errors.messages.include?(:country_id) )}
     %label.control-label.font-weight-light{for: "сountry"} Country
-    = f.select :country_id, options_for_select(Country.all.map{ |c| [c.name, c.id] }), {}, { class: 'form-control', placeholder: "Select a country" }
+    = f.select :country_id, options_for_select(EngineCart::Country.all.map{ |c| [c.name, c.id] }), {}, { class: 'form-control', placeholder: "Select a country" }
     %span.help-block= object.errors.full_messages_for(:country_id).first
   .form-group{:class => ("has-error" if object.errors.messages.include?(:phone) )}
     %label.control-label.font-weight-light{for: :phone} Phone
