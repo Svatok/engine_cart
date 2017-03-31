@@ -22,7 +22,8 @@ module EngineCart
     end
 
     def form_without_errors(address_type)
-      address = object.addresses.find_by(address_type: address_type) || current_user.addresses.find_by(address_type: address_type)
+      user_adresses = current_user.addresses.find_by(address_type: address_type) if current_user.respond_to?(addresses)
+      address = object.addresses.find_by(address_type: address_type) || user_adresses
       address.present? ? UserAddressForm.from_model(address) : UserAddressForm.new
     end
   end
