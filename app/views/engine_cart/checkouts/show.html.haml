@@ -28,3 +28,4 @@
         = render 'engine_cart/orders/order_total_panel'
       %button.btn.center-block.mb-20.visible-xs{name: "form_visible", value: "v_xs"}=  @order.in_waiting? ? 'Back to Store' : 'Save and Continue'
       %button.btn.center-block.mb-20.hidden-xs{name: "form_visible", value: "h_xs"}=  @order.in_waiting? ? 'Back to Store' : 'Save and Continue'
+= javascript_include_tag "engine_cart/application"
