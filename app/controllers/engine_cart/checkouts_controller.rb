@@ -8,7 +8,6 @@ module EngineCart
     after_action :complete_order, only: [:show]
 
     def show
-      binding.pry
     end
 
     def update
