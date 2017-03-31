@@ -23,7 +23,7 @@ module EngineCart
       PrepareCheckout.call(options) do
         on(:ok) do |order, view_partial, presenter|
           expose(order: order, view_partial: view_partial)
-          present "#{presenter.camelize}Presenter".constantize.new(object: order)
+          present "EngineCart::#{presenter.camelize}Presenter".constantize.new(object: order)
         end
         on(:invalid) { redirect_to root_path }
       end
