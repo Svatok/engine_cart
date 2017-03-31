@@ -11,7 +11,7 @@ module EngineCart
     end
 
     def update
-      "Set#{@order.state.capitalize}".constantize.call(options) do
+      "EngineCart::Set#{@order.state.capitalize}".constantize.call(options) do
         on(:ok) { |order| order.send(order.next_state + '_step!') and redirect_to checkouts_path }
         on(:invalid) { |object_with_errors| expose(object: object_with_errors) and render :show }
       end
