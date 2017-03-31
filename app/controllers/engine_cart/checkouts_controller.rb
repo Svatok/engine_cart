@@ -25,7 +25,7 @@ module EngineCart
           expose(order: order, view_partial: view_partial)
           present "EngineCart::#{presenter.camelize}Presenter".constantize.new(object: order)
         end
-        on(:invalid) { redirect_to root_path }
+        on(:invalid) { redirect_to main_app.root_path }
       end
     end
 
