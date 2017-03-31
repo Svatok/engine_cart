@@ -1,7 +1,7 @@
 %body
   %table
     %tr
-      %td{ colspan: "3" }= "Dear customer, #{@user.decorate.full_name}!"
+      %td{ colspan: "3" }= "Dear customer, #{@order.full_name}!"
     %tr
       %td{ align: "center", colspan: "3", style: "padding: 25px 0px; font-size: 17px; line-height: 24px; font-size: 18px; text-align: center" }
         = "Order #{@order.order_number}"
