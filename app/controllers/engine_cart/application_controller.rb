@@ -3,7 +3,7 @@ module EngineCart
   class ApplicationController < ::ApplicationController
     layout 'layouts/application'
     protect_from_forgery with: :exception
-    helper ApplicationHelper
+    include ApplicationHelper
 
 #     def current_order
 #       order = Order.find_by(id: session[:order_id]) unless session[:order_id].nil?
