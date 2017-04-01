@@ -9,5 +9,16 @@ require 'haml'
 require 'aasm'
 
 module EngineCart
-  # Your code goes here...
+  mattr_accessor :user_class
+  @@user_class = 'TypicalUser'
+
+  mattr_accessor :product_class
+  @@product_class = 'TypicalProduct'
+
+  mattr_accessor :product_price
+  @@product_price = 'price'
+  
+  def self.setup
+    yield self
+end
 end
