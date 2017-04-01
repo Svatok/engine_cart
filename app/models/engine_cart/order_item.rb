@@ -1,6 +1,6 @@
 module EngineCart
   class OrderItem < ApplicationRecord
-    belongs_to :product
+    belongs_to :product, class_name: EngineCart.product_class.to_s
     belongs_to :order
 
     validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
@@ -26,7 +26,7 @@ module EngineCart
     end
 
     def finalize
-      self[:unit_price] = product.prices.actual.first.value
+      self[:unit_price] = product.send(EngineCart.product_price) #prices.actual.first.value
     end
 
     def set_inactive_for_coupon
