@@ -19,9 +19,5 @@ module EngineCart
       resource_method = "current_#{EngineCart.person_class.underscore}"
       send(resource_method) if respond_to?(resource_method)
     end
-    
-    def product_price
-      product_price = EngineCart.product_price
-    end
   end
 end
