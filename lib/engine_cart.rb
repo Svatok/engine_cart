@@ -9,8 +9,8 @@ require 'haml'
 require 'aasm'
 
 module EngineCart
-  mattr_accessor :user_class
-  @@user_class = 'TypicalUser'
+  mattr_accessor :person_class
+  @@preson_class = 'TypicalUser'
 
   mattr_accessor :product_class
   @@product_class = 'TypicalProduct'
