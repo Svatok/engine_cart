@@ -5,12 +5,12 @@ module EngineCart
     include Rectify::ControllerHelpers
     helper OrdersHelper
 
-    before_action :authenticate_user!, only: [:index, :show]
+    before_action :authenticate_person!, only: [:index, :show]
 
     def index
       @all_sort_params = OrdersHelper::SORTING
       @params = sort_params
-      @orders = SorteredOrders.new(current_user.orders, params)
+      @orders = SorteredOrders.new(current_person.orders, params)
     end
 
     def show
