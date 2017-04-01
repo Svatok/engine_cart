@@ -26,7 +26,7 @@ module EngineCart
     end
 
     def finalize
-      self[:unit_price] = product.send_chain(product_price) #prices.actual.first.value
+      self[:unit_price] = product.instance_eval(EngineCart.product_price)#.send_chain(product_price) #prices.actual.first.value
     end
 
     def set_inactive_for_coupon
