@@ -9,5 +9,19 @@ module EngineCart
       order = Order.find_by(id: session[:order_id]) unless session[:order_id].nil?
       order ||= Order.new
     end
+    
+    def authenticate_corzinus_person!
+      auth_method = "authenticate_#{EngineCart.person_class.underscore}!"
+      send(auth_method) if respond_to?(auth_method)
+    end
+
+    def current_person
+      resource_method = "current_#{EngineCart.person_class.underscore}"
+      send(resource_method) if respond_to?(resource_method)
+    end
+    
+    def product_price
+      product_price = EngineCart.product_price
+    end
   end
 end
