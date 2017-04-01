@@ -10,7 +10,7 @@ module EngineCart
       order ||= Order.new
     end
     
-    def authenticate_corzinus_person!
+    def authenticate_person!
       auth_method = "authenticate_#{EngineCart.person_class.underscore}!"
       send(auth_method) if respond_to?(auth_method)
     end
