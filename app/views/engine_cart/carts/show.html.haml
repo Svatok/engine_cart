@@ -131,5 +131,5 @@
                     %strong.font-18 Order Total:
                   %td
                     %strong.font-18= number_to_currency(@order.total_price, unit: '€')
-              %a.btn.btn-default.mb-20.visible-xs-inline-block{href: checkouts_path} Checkout
-      %a.btn.btn-default.mb-20.hidden-xs.center-block.checkout-btn{href: checkouts_path} Checkout
+              %a.btn.btn-default.mb-20.visible-xs-inline-block{href: engine_cart.checkouts_path} Checkout
+      %a.btn.btn-default.mb-20.hidden-xs.center-block.checkout-btn{href: engine_cart.checkouts_path} Checkout

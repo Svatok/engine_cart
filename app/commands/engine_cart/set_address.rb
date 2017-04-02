@@ -1,4 +1,4 @@
-require_dependency "engine_cart/application_controller"
+require_dependency 'engine_cart/application_controller'
 
 module EngineCart
   class SetAddress < Rectify::Command
@@ -24,7 +24,7 @@ module EngineCart
     def set_address_forms
       @address_forms = {}
       @params['address_forms'].each do |address_type, params|
-        @address_forms[address_type.to_sym] = UserAddressForm.from_params(address_params(params))
+        @address_forms[address_type.to_sym] = AddressForm.from_params(address_params(params))
       end
     end
 

@@ -1,4 +1,4 @@
-require_dependency "engine_cart/application_controller"
+require_dependency 'engine_cart/application_controller'
 
 module EngineCart
   class SetConfirm < Rectify::Command
@@ -8,7 +8,7 @@ module EngineCart
 
     def call
       return broadcast(:invalid, @object) unless place_order
-      OrderMailer.order_complete(@object, current_user).deliver
+      OrderMailer.order_complete(@object, current_person).deliver
       broadcast(:ok, @object)
     end
 

@@ -1,5 +1,3 @@
-require_dependency "engine_cart/application_controller"
-
 module EngineCart
   class PaymentForm < Rectify::Form
     attribute :card_number, String

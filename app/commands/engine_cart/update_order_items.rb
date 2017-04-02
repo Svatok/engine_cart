@@ -1,4 +1,4 @@
-require_dependency "engine_cart/application_controller"
+require_dependency 'engine_cart/application_controller'
 
 module EngineCart
   class UpdateOrderItems < Rectify::Command
@@ -54,7 +54,7 @@ module EngineCart
     end
 
     def coupon_add
-      coupon = Product.coupons.find_by(title: @params[:coupon][:code], status: 'active')
+      coupon = EngineCart.product_class.constantize.coupons.find_by(title: @params[:coupon][:code], status: 'active')
       return @coupon_msg[:error] = 'Coupon is not valid or not active!' unless coupon.present?
       previous_coupon_delete
       @order.order_items.create(product_id: coupon.id, quantity: 1)

@@ -1,4 +1,4 @@
-require_dependency "engine_cart/application_controller"
+require_dependency 'engine_cart/application_controller'
 
 module EngineCart
   class SetDelivery < Rectify::Command
@@ -27,7 +27,7 @@ module EngineCart
 
     def selected_shipping
       return unless @params['shippings_' + @params['form_visible']].present?
-      Product.shippings.find(@params['shippings_' + @params['form_visible']]['product'])
+      EngineCart.product_class.constantize.shippings.find(@params['shippings_' + @params['form_visible']]['product'])
     end
   end
 end

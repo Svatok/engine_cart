@@ -3,7 +3,7 @@ module EngineCart
     attribute :object
 
     def available_shippings
-      Product.shippings.decorate
+      EngineCart.product_class.constantize.shippings
     end
 
     def current_order_shipping

@@ -17,7 +17,10 @@ module EngineCart
 
   mattr_accessor :product_price
   @@product_price = 'price'
-  
+
+  mattr_accessor :email_order
+  @@email_order = 'engine_cart@example.com'
+
   def self.setup
     yield self
 end

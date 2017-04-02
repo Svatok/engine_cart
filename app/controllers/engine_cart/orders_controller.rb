@@ -1,4 +1,4 @@
-require_dependency "engine_cart/application_controller"
+require_dependency 'engine_cart/application_controller'
 
 module EngineCart
   class OrdersController < ApplicationController

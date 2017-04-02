@@ -1,7 +1,5 @@
-require_dependency "engine_cart/application_controller"
-
 module EngineCart
-  class UserAddressForm < Rectify::Form
+  class AddressForm < Rectify::Form
     attribute :id, String
     attribute :address_type, String
     attribute :first_name, String

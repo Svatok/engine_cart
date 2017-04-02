@@ -1,5 +1,3 @@
-require_dependency "engine_cart/application_controller"
-
 module EngineCart
   class PaymentDecorator < Draper::Decorator
     delegate_all

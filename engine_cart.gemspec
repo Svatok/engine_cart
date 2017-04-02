@@ -16,11 +16,12 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.0.1"
+  s.add_dependency 'rails', '~> 5.0.1'
   s.add_dependency 'jquery-rails'
   s.add_dependency 'turbolinks', '~> 5'
   s.add_dependency 'jbuilder', '~> 2.5'
-  # s.add_dependency 'draper', github: 'audionerd/draper', branch: 'rails5'
+  s.add_dependency 'bootstrap-sass', '~> 3.3.6'
+  s.add_dependency 'sass-rails', '~> 5.0'
   s.add_dependency 'rectify'
   s.add_dependency 'kaminari'
   s.add_dependency 'aasm'
@@ -40,6 +41,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'letter_opener_web'
-  # s.add_development_dependency 'capybara-webkit'
   s.add_development_dependency 'rack_session_access'
 end

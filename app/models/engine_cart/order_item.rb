@@ -1,15 +1,15 @@
 module EngineCart
   class OrderItem < ApplicationRecord
-    belongs_to :product, class_name: EngineCart.product_class.to_s
+    belongs_to :product, class_name: EngineCart.product_class
     belongs_to :order
 
     validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
     validate :product_present, :order_present
     before_save :finalize, :set_inactive_for_coupon
     before_destroy :set_active_for_coupon
-    scope :only_products, -> { joins(:product).merge(Product.main) }
-    scope :only_shippings, -> { joins(:product).merge(Product.shippings) }
-    scope :only_coupons, -> { joins(:product).merge(Product.coupons) }
+    scope :only_products, -> { joins(:product).merge(EngineCart.product_class.constantize.main) }
+    scope :only_shippings, -> { joins(:product).merge(EngineCart.product_class.constantize.shippings) }
+    scope :only_coupons, -> { joins(:product).merge(EngineCart.product_class.constantize.coupons) }
 
     def total_price
       unit_price * quantity

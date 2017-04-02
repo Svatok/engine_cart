@@ -1,4 +1,4 @@
-require_dependency "engine_cart/application_controller"
+require_dependency 'engine_cart/application_controller'
 
 module EngineCart
   class PrepareCheckout < Rectify::Command
@@ -24,7 +24,7 @@ module EngineCart
     end
 
     def initialize_new_order
-      @order[:user_id] = current_user.id
+      @order[:user_id] = current_person.id
       @order.address_step!
     end
 
