@@ -1,5 +1,5 @@
 module EngineCart
-  class AddressForm < Rectify::Form
+  class OrderAddressForm < Rectify::Form
     attribute :id, String
     attribute :address_type, String
     attribute :first_name, String

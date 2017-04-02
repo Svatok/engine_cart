@@ -24,7 +24,7 @@ module EngineCart
     def set_address_forms
       @address_forms = {}
       @params['address_forms'].each do |address_type, params|
-        @address_forms[address_type.to_sym] = AddressForm.from_params(address_params(params))
+        @address_forms[address_type.to_sym] = OrderAddressForm.from_params(address_params(params))
       end
     end
 
