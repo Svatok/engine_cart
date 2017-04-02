@@ -8,7 +8,7 @@
     %ul.dropdown-menu
       - @all_sort_params.each do |sort, title|
         %li
-          %a{href: orders_path(@params.merge(sort: sort))}= title
+          %a{href: orders_path(sort: sort)}= title
   .visible-xs
     - @orders.each do |order|
       .general-cart-item
