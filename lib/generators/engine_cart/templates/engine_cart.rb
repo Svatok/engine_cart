@@ -8,6 +8,6 @@ EngineCart.setup do |config|
   # Define product price method
   config.product_price = 'price'
   
-  # Define email акщь for order
+  # Define email from for order
   config.email_order = 'engine_cart@example.com'
 end
