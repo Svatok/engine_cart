@@ -10,7 +10,8 @@ module EngineCart
       1. Creates a EngineCart initializer
       2. Add engine_cart routes
       3. Create migration files
-      4. require assets
+      4. Require assets
+      5. Require relations to main models
       5. Include to ApplicationController engine_cart controller methods and helpers
     DESC
     
