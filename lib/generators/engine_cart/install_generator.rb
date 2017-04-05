@@ -23,8 +23,8 @@ module EngineCart
       engine_cart_routes = 'mount EngineCart::Engine'
       return if File.readlines('config/routes.rb').grep(/#{engine_cart_routes}/).any?
       engine_cart_routes << " => '/cart'\n"
-      engine_cart_routes << "get '/orders', :to => 'engine_cart/orders#index', :as => :orders\n"
-      engine_cart_routes << "get '/orders/:id', :to => 'engine_cart/orders#show', :as => :order"
+      engine_cart_routes << "  get '/orders', to: 'engine_cart/orders#index', as: :orders\n"
+      engine_cart_routes << "  get '/orders/:id', to: 'engine_cart/orders#show', as: :order"
       route engine_cart_routes
     end
 
@@ -76,7 +76,7 @@ module EngineCart
       path = 'app/controllers/application_controller.rb'
       return if File.readlines(path).grep(/helper EngineCart::Engine.helpers/).any?
       inject_into_file path, after: 'class ApplicationController < ActionController::Base' do
-        insert << "\n  helper EngineCart::Engine.helpers\n"
+        "\n  helper EngineCart::Engine.helpers\n"
       end
     end
 
