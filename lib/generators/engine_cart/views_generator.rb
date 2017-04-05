@@ -5,7 +5,7 @@ module EngineCart
     desc 'Generates a view files'
 
     def generate_views
-      views_paths = EngineCart::Engine.root.join('app', 'views', 'corzinus')
+      views_paths = EngineCart::Engine.root.join('app', 'views', 'engine_cart')
       directory views_paths, 'app/views/engine_cart'
     end
   end
