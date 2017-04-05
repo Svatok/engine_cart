@@ -42,4 +42,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'letter_opener_web'
   s.add_development_dependency 'rack_session_access'
+  s.add_development_dependency 'draper', '3.0.0.pre1'
 end
