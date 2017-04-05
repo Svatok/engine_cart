@@ -28,7 +28,7 @@ module EngineCart
     end
 
     def generate_migrations
-      rake 'corzinus:install:migrations'
+      rake 'engine_cart:install:migrations'
     end
 
     def require_javascripts
