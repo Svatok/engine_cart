@@ -7,9 +7,6 @@
           %a.close.general-cart-close{'aria-label': "Close", 'data-method': 'put',
             href: cart_path(delete: 'true', product: order_item.product_id)}
           %span{'aria-hidden': "true"} &times;
-          .general-img-wrap-table
-            %a{href: product_path(order_item.product_id)}
-              %img.cart-img-shadow.width-full{src: order_item.product.product_pictures(1).first.image_path}
           %p.general-title= order_item.product.title
           %table.table
             %tr
@@ -68,8 +65,6 @@
     = form_tag cart_path,  method: :put do |field|
       %table.table.table-hover
         %tr.no-hover
-          %th.col-pic.pl-0
-            %span.in-grey-600 Product
           %th.col-title
           %th.col-price
             %span.in-grey-600 Price
@@ -80,10 +75,6 @@
           %th.col-close
         - @order_items.each  do |order_item|
           %tr
-            %td
-              .general-img-wrap-table
-                %a{href: product_path(order_item.product_id)}
-                  %img.cart-img-shadow.pull-left.width-full{src: order_item.product.product_pictures(1).first.image_path}
             %td
               %p.general-title= order_item.product.title
             %td
