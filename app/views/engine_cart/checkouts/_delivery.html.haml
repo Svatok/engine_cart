@@ -15,8 +15,7 @@
               .form-group.radio.mt-0.mb-0
                 %label.font-16.font-weight-light.pl-0
                   = f.radio_button :product, "#{shipping.id}", checked: shipping.id == presenter.current_order_shipping.product_id,
-                    type: "radio", hidden: true, class: "radio-input"
-                  %span.radio-icon
+                    type: "radio", class: "radio-input"
                   %span.radio-text= shipping.title
           %tr
             %td
@@ -47,8 +46,7 @@
               .form-group.radio.mt-0.mb-0
                 %label.font-16.font-weight-light.pl-0
                   = f.radio_button :product, "#{shipping.id}", checked: shipping.id == presenter.current_order_shipping.product_id,
-                    type: "radio", hidden: true, class: "radio-input"
-                  %span.radio-icon
+                    type: "radio", class: "radio-input"
                   %span.radio-text= shipping.title
             %td
               %span= shipping.description
