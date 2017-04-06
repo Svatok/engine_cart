@@ -63,11 +63,7 @@
                     %strong.font-18 Order Total:
                   %td
                     %strong.font-18= number_to_currency(@order.total_price, unit: '€')
-        .row
-          .col-sm-5
-          .col-sm-2
-            %a.btn.btn-default.mb-20.hidden-xs.center-block.checkout-btn{href: checkout_path} Checkout
-          .col-sm-5
+              %a.btn.btn-default.mb-20.visible-xs-inline-block{href: checkout_path} Checkout
   .hidden-xs
     = form_tag cart_path,  method: :put do |field|
       %table.table.table-hover
@@ -116,8 +112,9 @@
                 %div
                   %button.btn.btn-primary.mr-5.mb-15.visible-xs-inline-block Apply Coupon
                   %button.btn.btn-primary.mb-15.res-block.update-cart Update cart
-          .col-sm-8
-            .res-mr-200.text-center.general-text-right
+          .col-sm-4
+          .col-sm-4
+            .res-mr-200.general-text-right
               %p.in-gold-500.font-18 Order Summary
               %table.general-summary-table.general-summary-table-right.general-text-right
                 %tr
@@ -135,5 +132,8 @@
                     %strong.font-18 Order Total:
                   %td
                     %strong.font-18= number_to_currency(@order.total_price, unit: '€')
-              %a.btn.btn-default.mb-20.visible-xs-inline-block{href: engine_cart.checkout_path} Checkout
-      %a.btn.btn-default.mb-20.hidden-xs.center-block.checkout-btn{href: engine_cart.checkout_path} Checkout
+        .row
+          .col-sm-5
+          .col-sm-2
+            %a.btn.btn-default.mb-20.hidden-xs.center-block.checkout-btn{href: checkout_path} Checkout
+          .col-sm-5
