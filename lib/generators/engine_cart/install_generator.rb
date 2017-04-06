@@ -43,7 +43,7 @@ module EngineCart
 
     def require_stylesheets
       path = 'app/assets/stylesheets/application.css'
-      insert = '*= require engine_cart'
+      insert = '*= require engine_cart\n//= require bootstrap-sprockets'
       return if File.readlines(path).grep(insert).any?
       inject_into_file path, after: ' *= require_self' do
         "\n #{insert}"
