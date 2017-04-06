@@ -12,7 +12,5 @@
     = render 'engine_cart/addresses/forms', object: presenter.address_form('shipping'), address_type: 'shipping'
     .form-group.checkbox
       %label.font-weight-light.pl-0
-        %input.checkbox-input.billing-use{type: "checkbox", hidden: "true", name: 'use_billing', checked: presenter.use_billing?}
-        %span.checkbox-icon
-          %i.fa.fa-check
+        %input.checkbox-input.billing-use{type: "checkbox", name: 'use_billing', checked: presenter.use_billing?}
         %span.checkbox-text Use Billing Adress
