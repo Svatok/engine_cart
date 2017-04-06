@@ -17,7 +17,7 @@
       %span.step-number 4
       %span.step-text.hidden-xs Confirm
     %li.step-divider
-    %li.step{class: ("active" if @order.complete?)}
+    %li.step{class: ("active" if @order.in_waiting?)}
       %span.step-number 5
       %span.step-text.hidden-xs Complete
   = form_tag checkout_path, class: 'res-mb-100', method: :put do |field|
