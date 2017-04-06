@@ -4,7 +4,7 @@ module EngineCart
   class CheckoutsController < ApplicationController
     include Rectify::ControllerHelpers
 
-    before_action :authenticate_person!, :prepare_checkout, try(:ensure_signup_complete)
+    before_action :authenticate_person!, :prepare_checkout
     after_action :complete_order, only: [:show]
 
     def show
