@@ -1,4 +1,2 @@
-//= corzinus/addresses
-//= corzinus/checkouts
-//= corzinus/order_items
+//= engine_cart/checkouts
 //= require_tree .
