@@ -8,7 +8,11 @@ module EngineCart
 
     def call
       return broadcast(:invalid, @object) unless place_order
-      try(OrderMailer.order_complete(@object, current_person).deliver)
+      begin
+        OrderMailer.order_complete(@object, current_person).deliver
+      rescue => e
+        logger.warn "Check your mailer settings, will ignore: #{e}" 
+      end
       broadcast(:ok, @object)
     end
 
