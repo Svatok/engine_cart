@@ -8,7 +8,7 @@ module EngineCart
 
     def call
       return broadcast(:invalid, @object) unless place_order
-      OrderMailer.order_complete(@object, current_person).deliver
+      try(OrderMailer.order_complete(@object, current_person).deliver)
       broadcast(:ok, @object)
     end
 
