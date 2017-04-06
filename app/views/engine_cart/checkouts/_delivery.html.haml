@@ -1,7 +1,6 @@
 %h3.general-subtitle Shipping Method
 - if presenter.current_order_shipping.errors[:product_id].present?
   .alert.alert-error.alert-danger
-    %a.close{ 'data-dismiss': "alert"} ×
     = presenter.current_order_shipping.errors['product_id'].first
 .visible-xs
   = fields_for 'shippings_v_xs', presenter.available_shippings do |f|
