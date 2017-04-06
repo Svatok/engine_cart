@@ -1,2 +1,63 @@
 @import "bootstrap-sprockets";
 @import 'bootstrap';
+
+// Checkout Stepper
+
+.step-number {
+  width: 35px;
+  height: 35px;
+  font-size: $font-size-base;
+  color: $grey-900;
+  font-weight: 600;
+  line-height: 31px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid $gold-500;
+  border-radius: 50%;
+}
+.step-text {
+  font-size: $font-size-base;
+  color: $grey-600;
+  font-weight: 300;
+  margin-left: 10px;
+}
+.steps .step {
+  position: relative;
+  margin: 0 6px 10px;
+  padding-right: 0;
+  padding-left: 0;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.steps .step-divider {
+  position: relative;
+  vertical-align: middle;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 13px;
+    height: 2px;
+    display: block;
+    background-color: $grey-200;
+  }
+}
+.active,
+.done {
+  .step-number {
+    color: white;
+    background-color: $gold-500;
+  }
+  .step-text {
+    color: $grey-900;
+  }
+  .step-icon {
+    font-size: 12px;
+  }
+}
+
