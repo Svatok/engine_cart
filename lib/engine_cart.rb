@@ -1,6 +1,8 @@
 require "engine_cart/engine"
 require 'jquery-rails'
 require 'turbolinks'
+require 'bootstrap-sass'
+require 'sass-rails'
 require 'jbuilder'
 require 'draper'
 require 'rectify'
