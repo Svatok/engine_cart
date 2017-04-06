@@ -70,3 +70,33 @@ $font-size-base:          14px !default;
   }
 }
 
+// Dropdown
+
+.dropdown-btn {
+  font-size: 14px;
+  color: $grey-600;
+  border: 1px solid $grey-200;
+  display: inline-block;
+  padding: 10px 15px;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $grey-600;
+  }
+  .dropdown-icon {
+    font-size: 18px;
+    color: $grey-600;
+    line-height: 21px;
+    float: right;
+    margin-left: 15px;
+  }
+}
+.dropdown-menu {
+  min-width: 240px;
+  > li > a {
+    font-weight: 300;
+    padding: 8px 30px;
+    white-space: unset;
+    word-break: break-word;
+  }
+}
