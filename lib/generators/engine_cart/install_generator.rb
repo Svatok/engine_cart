@@ -68,7 +68,7 @@ module EngineCart
       end
       return if File.readlines(path).grep(/has_many :order_items, class_name: 'EngineCart::OrderItem'/).any?
       inject_into_file path, after: "class #{product_model_class} < ApplicationRecord" do
-        "  has_many :order_items, class_name: 'EngineCart::OrderItem', dependent: :destroy\n"
+        "\n  has_many :order_items, class_name: 'EngineCart::OrderItem', dependent: :destroy"
       end
     end
     
