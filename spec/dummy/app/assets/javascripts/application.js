@@ -10,4 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require engine_cart
+//= require bootstrap-sprockets
 //= require_tree .
