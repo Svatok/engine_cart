@@ -12,10 +12,10 @@ require 'aasm'
 
 module EngineCart
   mattr_accessor :person_class
-  @@preson_class = 'TypicalUser'
+  @@preson_class = 'User'
 
   mattr_accessor :product_class
-  @@product_class = 'TypicalProduct'
+  @@product_class = 'Product'
 
   mattr_accessor :product_price
   @@product_price = 'price'
