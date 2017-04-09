@@ -3,7 +3,7 @@ module EngineCart
     attribute :object
 
     def address(address_type)
-      bject.addresses.address_with_type(address_type).decorate
+      object.addresses.address_with_type(address_type).decorate
     end
 
     def shipping
