@@ -1,9 +1,12 @@
-require 'test_helper'
+require 'rails_helper'
 
 module EngineCart
-  class AddressTest < ActiveSupport::TestCase
-    # test "the truth" do
-    #   assert true
-    # end
+  RSpec.describe Address, type: :model do
+    subject { build :billing_address }
+
+    context 'associations' do
+      it { should belong_to :addressable }
+      it { should belong_to :country }
+    end
   end
 end

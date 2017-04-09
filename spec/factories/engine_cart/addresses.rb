@@ -1,12 +1,12 @@
 FactoryGirl.define do
-  factory :address do
+  factory :address, class: EngineCart::Address do
     first_name FFaker::Name.first_name
     last_name FFaker::Name.last_name
     address FFaker::Address.street_name
     city FFaker::Address.city
     zip 49000
     phone '+3807777777'
-    association :country
+    country_id { create(:country).id }
 
     trait :shipping do
       address_type :shipping

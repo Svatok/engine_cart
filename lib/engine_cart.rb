@@ -1,6 +1,5 @@
 require "engine_cart/engine"
 require 'jquery-rails'
-require 'turbolinks'
 require 'bootstrap-sass'
 require 'sass-rails'
 require 'jbuilder'
@@ -9,6 +8,7 @@ require 'rectify'
 require 'kaminari'
 require 'haml'
 require 'aasm'
+require 'turbolinks'
 
 module EngineCart
   mattr_accessor :person_class

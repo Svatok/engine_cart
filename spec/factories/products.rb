@@ -5,7 +5,7 @@ FactoryGirl.define do
     product_type 'product'
     status 'active'
     price 15
-    
+
     trait :coupon do
       title { '123456789' }
       product_type 'coupon'
@@ -17,7 +17,7 @@ FactoryGirl.define do
       title 'shipping'
       product_type 'shipping'
       description '3 to 5 days'
-      price: 11.0
+      price 11.0
     end
 
     trait :with_orders do

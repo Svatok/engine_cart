@@ -26,8 +26,8 @@ module EngineCart
     end
 
     def selected_shipping
-      return unless @params['shippings_' + @params['form_visible']].present?
-      EngineCart.product_class.constantize.shippings.find(@params['shippings_' + @params['form_visible']]['product'])
+      return unless @params['shippings_' + @params['form_visible'].to_s].present?
+      EngineCart.product_class.constantize.shippings.find(@params['shippings_' + @params['form_visible'].to_s]['product'])
     end
   end
 end

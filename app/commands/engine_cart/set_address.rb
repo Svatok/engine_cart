@@ -12,7 +12,7 @@ module EngineCart
     def call
       @address_forms.each do |address_type, address_form|
         next unless needs_to_be_updated?(address_type)
-        @errors = true unless address_form.valid?
+        @errors = true and next unless address_form.valid?
         set_address(address_type, address_form)
       end
       return broadcast(:invalid, @address_forms) if @errors

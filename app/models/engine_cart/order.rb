@@ -2,7 +2,7 @@ module EngineCart
   class Order < ApplicationRecord
     include OrderStateMachine
 
-    belongs_to :user, class_name: EngineCart.person_class.to_s
+    belongs_to :user, class_name: EngineCart.person_class.to_s, optional: true #changed
     has_many :order_items, dependent: :destroy
     has_many :payments, dependent: :destroy
     has_many :addresses, as: :addressable, dependent: :destroy

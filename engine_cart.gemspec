@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'capybara-email'
   s.add_development_dependency 'email_spec'
+  s.add_development_dependency 'wisper-rspec'
   s.add_development_dependency 'capybara-screenshot'
   s.add_development_dependency 'poltergeist'
   s.add_development_dependency 'factory_girl_rails'

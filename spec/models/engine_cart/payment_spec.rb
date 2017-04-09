@@ -1,9 +1,11 @@
-require 'test_helper'
+require 'rails_helper'
 
 module EngineCart
-  class PaymentTest < ActiveSupport::TestCase
-    # test "the truth" do
-    #   assert true
-    # end
+  describe Order, type: :model do
+    subject { build :payment }
+
+    context 'association' do
+      it { should belong_to :order }
+    end
   end
 end
