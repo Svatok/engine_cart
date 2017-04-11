@@ -1,15 +1,19 @@
 # EngineCart
-Short description and motivation.
+With EngineCart you can add the functionality of the shopping cart to your online store.
 
-## Usage
-How to use my plugin.
+1. [Installation](#installation)
+2. [Restrictions](#restrictions)
+2. [Configuration](#configuration)
+3. [EngineCart functionality](#engine_cart-functionality)
+    - [Cart](#cart)
+    - [Checkout](#checkout)
+    - [Orders](#orders)
+4. [Examples](#examples)
 
 ## Installation
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'engine_cart'
-```
+1. Add to your gemfile: gem 'engine_cart', github: 'Svatok/engine_cart', branch: 'dev'
+2. Run bundle install
+3. Run rails g corzinus:install USER_MODEL PRODUCT_MODEL
 
 And then execute:
 ```bash
