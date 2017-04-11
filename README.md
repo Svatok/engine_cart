@@ -4,7 +4,7 @@ With EngineCart you can add the functionality of the shopping cart to your onlin
 1. [Installation](#installation)
 2. [Restrictions](#restrictions)
 2. [Configuration](#configuration)
-3. [EngineCart functionality](#engine_cart-functionality)
+3. [Functionality](#Functionality)
     - [Cart](#cart)
     - [Checkout](#checkout)
     - [Orders](#orders)
@@ -53,7 +53,7 @@ config.product_price = 'price'
 config.email_order = 'engine_cart@example.com'
 ...
 ```
-## EngineCart functionality
+## Functionality
 ### Cart
 EngineCart has page with order items on which you can:
  - change the amount of chosen products
