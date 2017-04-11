@@ -60,7 +60,7 @@ EngineCart has page with order items on which you can:
  - remove products from the cart
  - apply a coupon code for discount
 ### Checkout
-After filling the cart the user proceeds to checkout:
+After filling the cart the user goes to checkout:
  1. Filling billing and shipping addresses
  2. Choose delivery method
  3. Filling payment requisites
