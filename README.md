@@ -66,7 +66,7 @@ After filling the cart the user goes to checkout:
  3. Filling payment requisites
  4. Confirm completed information from previous steps
  5. Get success message about finished order and sending of the letter with order details.
-### Order
+### Orders
 EngineCart provides an opportunity for users to view their orders.
 
 Order has states:
