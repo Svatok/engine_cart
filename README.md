@@ -37,7 +37,7 @@ scope :coupons, -> { where(product_type: 'coupon') }
 scope :shippings, -> { where(product_type: 'shipping') }
 ```
 ## Configuration
-In `config/initializers/corzinus.rb`
+In `config/initializers/engine_cart.rb`
 ```ruby
 ...
 # Define person class
