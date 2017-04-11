@@ -11,18 +11,17 @@ With EngineCart you can add the functionality of the shopping cart to your onlin
 4. [Examples](#examples)
 
 ## Installation
-1. Add to your gemfile: gem 'engine_cart', github: 'Svatok/engine_cart', branch: 'dev'
-2. Run bundle install
-3. Run rails g corzinus:install USER_MODEL PRODUCT_MODEL
-
-And then execute:
-```bash
-$ bundle
+1. Add to your gemfile:
+```ruby
+gem 'engine_cart', github: 'Svatok/engine_cart', branch: 'dev'
 ```
-
-Or install it yourself as:
+2. Execute:
 ```bash
-$ gem install engine_cart
+$ bundle install
+```
+3. Install EngineCart: 
+```bash
+$ rails g engine_cart:install USER_MODEL PRODUCT_MODEL
 ```
 
 ## Contributing
